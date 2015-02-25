@@ -27,6 +27,8 @@ git add .
 git commit -am "Adds README and Git ignore files."
 git push heroku master
 
+echo "Opening $1"
 heroku open
 
-echo "Done"
+echo "Tailing $1 logs"
+heroku logs --tail
